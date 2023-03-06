@@ -19,21 +19,22 @@
         <label for="read">Read Status:</label>
         <select name="read" id="read">
             <option value="read">Read</option>
-            <option value="notread">Not Read</option>
+            <option value="not read">Not Read</option>
         </select>
-        <button type="button">Add Book</button>
+        <button type="button" class="addButton">Add Book</button>
     </form>
     <div class="listHeader">
-        <p>Name</p>
         <p>Book Title</p>
+        <p>Author</p>
         <p>Status</p>
-        <p></p>
     </div>
     <ul class="bookList">
-        <li>Placeholder</li>
-        <li>Placeholder</li>
-        <li>Placeholder</li>
-        <button>Delete</button>
+        <div class="eachBook">
+            <li>placeholder</li>
+            <li>placeholder</li>
+            <li><button class="switchRead">Read</button></li>
+            <button class="deleteButton">Delete</button>
+        </div>
     </ul>
 
     <script src="scripts.js"></script>

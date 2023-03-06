@@ -5,30 +5,32 @@
 }
 
 body{
-    width: 800px;
+    width: 1000px;
     margin: auto;
+    font-size: 24px;
 }
 
 h1{
     padding-top: 100px;
 }
 
+
 .addBooks{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
     
 }
 
 .listHeader{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     padding-top: 50px
 }
 
-.bookList{
+.eachBook{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     list-style: none;
     padding-top: 10px;
 }
@@ -37,7 +39,8 @@ button{
     align-self: center;
     justify-self: center;
     width: 100px;
-    height: 25px;
+    height: 30px;
+    font-size: 20px;
 }
 
 form > button{
@@ -45,8 +48,16 @@ form > button{
     color: rgb(10, 6, 6);
 }
 
-.bookList > button{
+.eachBook > button{
     background-color: rgb(250, 54, 54);
+}
+.eachBook  .switchRead{
+    background-color: lightblue;
+    width: 100px;
+}
+
+.eachBook  .notread{
+    background-color: red;
 }
 
 li{
