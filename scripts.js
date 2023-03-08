@@ -1,6 +1,7 @@
 const bookList = document.querySelector('.bookList');
 const addButton = document.querySelector('.addButton')
-const remove = document.querySelector('.deleteButton')
+
+
 
 
 function Book(title, author, read) {
@@ -21,7 +22,7 @@ function addBooktoLib() {
                       <button class="deleteButton">Delete</button>
                       </div>`;
     bookList.innerHTML += bookItem
-    
+
 
 }
 
@@ -32,18 +33,21 @@ addButton.addEventListener('click', addBooktoLib);
 
 
 bookList.addEventListener('click', (e) => {
-    e.preventDefault();
+    e.preventDefault();;
     if (e.target.classList.contains('deleteButton')) {
         e.target.parentElement.remove();
-    } else if (e.target.classList.contains('switchRead')){
-        e.target.classList.toggle('notread')
-        if(e.target.textContent === 'Read'){
+    }
+    if (e.target.classList.contains('switchRead')) {
+        if (!e.target.classList.contains('notread')) {
+            e.target.classList.toggle('notread')
+            e.target.style.backgroundColor = 'red'
             e.target.textContent = 'Not Read'
         } else{
+            e.target.classList.toggle('notread')
+            e.target.style.backgroundColor = 'lightblue'
             e.target.textContent = 'Read'
         }
-    } 
-     
+    }
 
 })
 
