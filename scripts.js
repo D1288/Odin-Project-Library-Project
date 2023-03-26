@@ -1,7 +1,8 @@
 const bookList = document.querySelector('.bookList');
 const addButton = document.querySelector('.addButton')
+const form = document.querySelector('form')
 
-
+let library = [];
 
 
 function Book(title, author, read) {
@@ -15,6 +16,7 @@ function addBooktoLib() {
     let author = document.querySelector('#author').value;
     let read = document.querySelector('#read').value;
     let addedBook = new Book(title, author, read);
+    library.push(addedBook)
     const bookItem = `<div class="eachBook">
                       <li>${addedBook.title}</li>
                       <li>${addedBook.author}</li>
@@ -22,7 +24,7 @@ function addBooktoLib() {
                       <button class="deleteButton">Delete</button>
                       </div>`;
     bookList.innerHTML += bookItem
-
+    form.reset()
 
 }
 
