@@ -5,10 +5,12 @@ const form = document.querySelector('form')
 let library = [];
 
 
-function Book(title, author, read) {
-    this.title = title;
-    this.author = author;
-    this.read = read;
+class Book {
+    constructor(title, author, read) {
+        this.title = title;
+        this.author = author;
+        this.read = read;
+    }
 }
 
 function addBooktoLib() {
