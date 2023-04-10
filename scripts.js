@@ -18,15 +18,18 @@ function addBooktoLib() {
     let author = document.querySelector('#author').value;
     let read = document.querySelector('#read').value;
     let addedBook = new Book(title, author, read);
-    library.push(addedBook)
-    const bookItem = `<div class="eachBook">
-                      <li>${addedBook.title}</li>
-                      <li>${addedBook.author}</li>
-                      <li><button class="switchRead">${addedBook.read}</button></li>
-                      <button class="deleteButton">Delete</button>
-                      </div>`;
-    bookList.innerHTML += bookItem
-    form.reset()
+    if (title !== '' && author !== '') {
+        library.push(addedBook)
+        const bookItem = `<div class="eachBook">
+        <li>${addedBook.title}</li>
+        <li>${addedBook.author}</li>
+        <li><button class="switchRead">${addedBook.read}</button></li>
+        <button class="deleteButton">Delete</button>
+        </div>`;
+        bookList.innerHTML += bookItem
+        form.reset()
+    }
+
 
 }
 
@@ -46,7 +49,7 @@ bookList.addEventListener('click', (e) => {
             e.target.classList.toggle('notread')
             e.target.style.backgroundColor = 'red'
             e.target.textContent = 'Not Read'
-        } else{
+        } else {
             e.target.classList.toggle('notread')
             e.target.style.backgroundColor = 'lightblue'
             e.target.textContent = 'Read'

@@ -13,15 +13,15 @@
     <h1>My Library</h1>
     <form class="addBooks">
         <label for="book">Book:</label>
-        <input type="text" name="book" id="book">
+        <input type="text" name="book" id="book" required>
         <label for="author">Author:</label>
-        <input type="text" name="author" id="author">
+        <input type="text" name="author" id="author" required>
         <label for="read">Read Status:</label>
-        <select name="read" id="read">
+        <select name="read" id="read" required>
             <option value="Read">Read</option>
             <option value="Not Read">Not Read</option>
         </select>
-        <button type="button" class="addButton">Add Book</button>
+        <button type="submit" class="addButton">Add Book</button>
     </form>
     <div class="listHeader">
         <p>Book Title</p>
